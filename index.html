@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio IA - Data Analyst</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="overlay"></div>
+
+  <header>
+    <h1 class="gradient-text">Welcome into the World of Data Intelligence</h1>
+    <p id="typed-intro"></p>
+  </header>
+
+  <nav>
+    <a onclick="showSection('about')">🧠 About Me</a>
+    <a onclick="showSection('education')">🎓 Éducation</a>
+    <a onclick="showSection('experience-projects')">📊 Expérience & Projets</a>
+    <a onclick="showSection('skills')">🛠️ Compétences</a>
+    <a onclick="showSection('contact')">📬 Contact</a>
+  </nav>
+
+
+
+
+<main>
+<!-- About Me avec photo ingénieur info pro -->
+<section id="about" class="active">
+  <h2>🧠 À propos de moi</h2>
+  <div class="about-wrapper">
+    <div class="about-images">
+    <img src="le-concept-de-technologie-futuriste.jpg" alt="Ingénieur informatique professionnel" />
+    </div>
+    <div class="about-text">
+      <p>Étudiant en Ingénierie Mathématiques et Data Science (IMDS) à Polytech Clermont-Ferrand, je me forme aux techniques avancées de programmation, d’analyse de données, de data visualisation et de gestion de grandes quantités de données.</p>
+      <p>Je développe également mes connaissances en intelligence artificielle, apprentissage automatique et deep learning afin d’apporter des solutions innovantes basées sur les données.</p>
+      <p>Curieux et motivé, j’ai hâte de mettre mes compétences en action sur des projets concrets et innovants, au sein d’une équipe prête à relever de nouveaux défis et à m’accompagner dans ma formation continue.</p>
+      <p>Je vise à terme des postes tels que Data Analyst, Data Scientist, ou encore Ingénieur en Intelligence Artificielle, où je pourrai exploiter pleinement mes compétences techniques et mon esprit analytique pour transformer les données en valeur ajoutée stratégique.</p>
+    </div>
+  </div>
+
+<!-- Réseaux sociaux + bouton CV -->
+  <div class="social-cv">
+    <a href="https://www.linkedin.com/in/aymanzejli" target="_blank" aria-label="LinkedIn">
+      <img src="linkedin-svgrepo-com.svg" alt="LinkedIn" class="linkedin"/>
+    </a>
+    <a href="https://github.com/Aymanzej" target="_blank" aria-label="GitHub">
+      <img src="github-svgrepo-com.svg" alt="GitHub" class="social-icon"/>
+    </a>
+  </div>
+
+
+  <div class="social-cv2">
+    <a href="CV Stage Ayman ZEJLI.pdf" download class="cv-button">Télécharger mon CV</a>
+  </div>
+
+  <div class="hire-me-container">
+    <a href="javascript:void(0);" class="hire-me-button" onclick="showSection('contact')">Hire me</a>
+  </div>
+
+
+</section>
+
+    <!-- Éducation avec logos verticaux -->
+<section id="education">
+  <h2>🎓 Éducation</h2>
+  <div class="education-wrapper">
+
+    <!-- LOGO avec filtre -->
+    <div class="education-image-left">
+      <img src="logo_inp_polytech_2023.png" alt="Polytech Clermont-Ferrand" />
+    </div>
+
+    <!-- TEXTE -->
+    <ul class="education-text">
+      <li><strong>Polytech Clermont – Clermont-Ferrand (63)</strong><br />
+          Département Ingénierie Mathématiques et Data Science (IMDS)<br />
+          <em>Septembre 2023 – Septembre 2026</em>
+      </li>
+      <li><strong>CPGE MPSI / MP</strong><br />
+          <em>Septembre 2021 – Juillet 2023</em>
+      </li>
+      <li><strong>Baccalauréat Scientifique (Mathématiques / Physique)</strong><br />
+          Mention Bien – Lycée Saint-Exupéry, Mantes-La-Jolie (78)<br />
+          <em>2021</em>
+      </li>
+    </ul>
+
+    <!-- IMAGE d’ambiance sans filtre -->
+    <div class="education-image-right">
+      <img src="VGXTf101.svg" alt="Ambiance scolaire" />
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+<section id="experience-projects">
+  <h2>📊 Expérience & Projets</h2>
+  <div class="project-grid">
+
+    <!-- Projet Jeu 2048 -->
+    <div class="project-block">
+      <img src="Capture d'écran 2025-01-22 184022.png" alt="Jeu 2048 - Qt C++" class="project-img-large">
+      <div class="project-text">
+        <h3>🎮 Projet Jeu 2048 (Qt, C++)</h3>
+        <ul>
+          <li>Développement graphique du jeu 2048 avec Qt et C++</li>
+          <li>Conception de l'architecture via diagrammes UML</li>
+          <li>Interface intuitive pour une expérience utilisateur fluide</li>
+        </ul>
+        <div class="project-buttons">
+          <button id="download-report-btn" class="btn">Télécharger le rapport</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal téléchargement -->
+    <div id="download-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" id="close-modal">&times;</span>
+        <h3>Choisissez le document à télécharger</h3>
+        <ul class="download-list">
+          <li><a href="manuel_utilisateur.pdf" target="_blank" download>Manuel Utilisateur</a></li>
+          <li><a href="manuel_developpeur.pdf" target="_blank" download>Manuel Développeur</a></li>
+          <li><a href="rapport_projet.pdf" target="_blank" download>Rapport de projet</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- Projet OpenStreetMap -->
+    <div class="project-block">
+      <img src="OSM.png" alt="Projet OpenStreetMap" class="project-img-small">
+      <div class="project-text">
+        <h3>🗺️ Optimisation d'itinéraires – OpenStreetMap</h3>
+        <ul>
+          <li>Développement Python pour optimiser les trajets de véhicules électriques</li>
+          <li>Utilisation de données de stations de recharge</li>
+          <li>Algorithmes de routage et traitement géospatial avancé</li>
+        </ul>
+        <div class="project-buttons">
+          <a href="rapport_osm.pdf" target="_blank" class="btn">Télécharger le rapport</a>
+          <a href="presentation_osm.pptx" target="_blank" class="btn">Télécharger la présentation</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage Linköping -->
+    <div class="project-block">
+      <img src="sport data analytics.png" alt="Sport Data Analytics - Suède" class="project-img-small2">
+      <div class="project-text">
+        <h3>⚽ Stage Sport Data Analytics – Suède</h3>
+        <ul>
+          <li>Analyse des structures d’équipe et styles de jeu</li>
+          <li>Modélisation des rôles des joueurs avec Python</li>
+          <li>Exploration des comportements tactiques en data science</li>
+        </ul>
+        <div class="project-buttons">
+          <a href="rapport_stage_linkoping.pdf" target="_blank" class="btn">Télécharger le rapport</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Messi Project -->
+  <div class="project-block">
+    <img src="https://wallpapercave.com/wp/wp4240427.jpg" alt="Messi Goal Analytics" class="project-img-small2">
+    <div class="project-text">
+      <h3>⚽ Lionel Messi's Goals Analytics</h3>
+      <ul>
+        <li>Les données ont été récupérées par <strong>web scraping</strong> depuis Transfermarkt</li>
+        <li>Analyse complète de la carrière de Lionel Messi à travers ses buts en clubs</li>
+        <li>Visualisations et interprétations des performances saison par saison</li>
+      </ul>
+      <p>
+        <div class="project-buttons">
+          <a href="https://github.com/Aymanzej" target="_blank" aria-label="GitHub"> 💻 Code disponible ici 
+          <img src="github-svgrepo-com.svg" alt="GitHub" class="social-icon" style="margin-left: 5px;"/>
+        </div>
+      </a>
+      </p>
+    </div>
+  </div>
+
+  
+
+  <!-- Forest Species Project -->
+  <div class="project-block">
+    <img src="Projet_5A_logo.png" alt="Forest Species Analytics" class="project-img-small2">
+    <div class="project-text">
+      <h3>🌲 Modélisation de l’évolution temporelle des espèces forestières</h3>
+      <p><em>Septembre 2025 – Janvier 2026 (Projet en cours)</em></p>
+
+      <ul>
+        <li>Préparation et visualisation de données de terrain (séries temporelles, SIG).</li>
+        <li>Entraînement de modèles d’apprentissage automatique pour détecter les schémas de variation des espèces.</li>
+        <li>Prédiction des changements probables dans la composition forestière sur une période donnée.</li>
+        <li>Évaluation de la précision avec des données indépendantes.</li>
+      </ul>
+
+      <div class="project-buttons">
+        <button class="btn" onclick="alert('⚠️ Rapport non disponible : projet en cours de réalisation...')">
+          📄 Télécharger le rapport
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</section>
+
+
+
+
+
+
+<!-- Compétences + Passions -->
+<section id="skills" style="max-width: 1100px; margin: auto; padding: 70px 20px; font-family: 'Roboto', sans-serif; color: #eee;">
+  <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 50px; font-weight: 700; letter-spacing: 1px;">
+    🛠️ Compétences & Passions
+  </h2>
+
+  <div class="skills-wrapper" style="display: flex; gap: 35px; justify-content: center; flex-wrap: wrap;">
+
+    <!-- Hard Skills -->
+    <div class="skills-list" style="background: #1c1c1c; padding: 40px 30px; border-radius: 12px; width: 100px; min-height: 200px; display: flex; flex-direction: column;">
+      <h3 style="font-size: 1.4rem; color: #0078D7; margin-bottom: 20px; font-weight: 600;">Hard Skills</h3>
+      <ul style="list-style-type: disc; padding-left: 20px; margin: 0; line-height: 2; flex-grow: 1;">
+        <li>Python (Pandas / Matplotlib / Seaborn / Plotly / Streamlit)</li>
+        <li>C, C++, Java, RStudio, SQL, PostgreSQL</li>
+        <li>Power BI / Tableau - Visualisation de données</li>
+        <li>Machine Learning & Deep Learning (Scikit-Learn / TensorFlow / Keras / PyTorch)</li>
+      </ul>
+    </div>
+
+    <!-- Soft Skills -->
+    <div class="skills-list" style="background: #1c1c1c; padding: 40px 30px; border-radius: 12px; width: 100px; min-height: 200px; display: flex; flex-direction: column;">
+      <h3 style="font-size: 1.4rem; color: #28a745; margin-bottom: 20px; font-weight: 600;">Soft Skills</h3>
+      <ul style="list-style-type: disc; padding-left: 20px; margin: 0; line-height: 2; flex-grow: 1;">
+        <li>Résilience et capacité à s’adapter aux situations complexes</li>
+        <li>Esprit analytique et autonomie dans la résolution de problèmes</li>
+        <li>Gestion de projet efficace et travail en équipe collaboratif</li>
+        <li>Bienveillance et humilité dans les interactions professionnelles</li>
+      </ul>
+    </div>
+
+    <!-- Passions -->
+    <div class="skills-list" style="background: #1c1c1c; padding: 40px 30px; border-radius: 12px; width: 100px; min-height: 200px; display: flex; flex-direction: column;">
+      <h3 style="font-size: 1.4rem; color: #f39c12; margin-bottom: 20px; font-weight: 600;">Passions</h3>
+      <ul style="list-style-type: disc; padding-left: 20px; margin: 0; line-height: 2; flex-grow: 1;">
+        <li>Pratique régulière du football, alliant passion et esprit d'équipe</li>
+        <li>Voyages et découvertes culturelles</li>
+        <li>Passion pour les mangas et les animés</li>
+        <li>Développement personnel et dépassement de soi</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+<!-- === Section Contact simplifiée === -->
+<section id="contact" style="max-width:800px;margin:auto;padding:40px 20px;text-align:center;color:#eee;">
+  <h2 style="font-size:2rem;margin-bottom:20px;">📬 Comment me contacter</h2>
+
+  <!-- Emails -->
+  <div style="margin-bottom:20px;">
+    <h3 style="color:#0078D7;margin-bottom:10px;">✉️ Emails</h3>
+    <p style="font-size:1.1rem;line-height:1.8;">
+      <strong style="color:#0078D7;">Perso :</strong> 
+      <a href="mailto:aymanzej@gmail.com" style="color:#28a745;text-decoration:none;font-weight:600;">
+        aymanzej@gmail.com
+      </a>
+      <br>
+      <strong style="color:#0078D7;">Université (UCA) :</strong> 
+      <a href="mailto:ayman.zejli@etu.uca.fr" style="color:#28a745;text-decoration:none;font-weight:600;">
+        ayman.zejli@etu.uca.fr
+      </a>
+    </p>
+  </div>
+
+  <!-- Téléphone -->
+  <div style="margin-bottom:20px;">
+    <h3 style="color:#0078D7;margin-bottom:10px;">📞 Téléphone</h3>
+    <a href="tel:+33782938031" style="font-size:1.2rem;color:#28a745;text-decoration:none;font-weight:600;">
+      +33 7 82 93 80 31
+    </a>
+  </div>
+
+  <!-- Mobilité -->
+  <div>
+    <h3 style="color:#0078D7;margin-bottom:10px;">🚗 Mobilité</h3>
+    <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;">
+      <span style="background:#0078D7;color:#fff;padding:8px 18px;border-radius:25px;font-weight:600;">
+        Île-de-France
+      </span>
+      <span style="background:#28a745;color:#fff;padding:8px 18px;border-radius:25px;font-weight:600;">
+        Auvergne-Rhône-Alpes
+      </span>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 • Portfolio by Ayman Z</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

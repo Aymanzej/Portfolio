@@ -1,0 +1,627 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #00ffc3 0%, #000 100%);
+  opacity: 0.07;
+  z-index: -1;
+}
+
+/* Header */
+
+header {
+  text-align: center;
+  padding: 50px 20px 40px;
+}
+
+header h1 {
+  font-size: 3.5em;
+  margin-bottom: 10px;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #00ffc3, #0084ff, #6a00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#typed-intro {
+  font-size: 1.3em;
+  font-weight: 500;
+  color: #00ffc3;
+  min-height: 30px;
+}
+
+/* Navigation */
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #00ffc3;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  cursor: pointer;
+  padding: 8px 15px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #00ffc380;
+}
+
+/* Main Sections */
+
+main {
+  max-width: 1100px;
+  margin: 0 auto 60px;
+  padding: 0 15px;
+}
+
+section {
+  display: none;
+  animation: fadeIn 0.7s ease forwards;
+}
+
+section.active {
+  display: block;
+}
+
+h2 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  color: #00ffc3;
+  border-bottom: 2px solid #0085ff;
+  padding-bottom: 5px;
+}
+
+.hire-me-container {
+  text-align: center;
+  margin-top: 40px; /* espace au-dessus */
+}
+
+.hire-me-button {
+  display: inline-block;
+  background-color: #e63946; /* rouge vif */
+  color: white;
+  font-size: 1.5em;
+  font-weight: 700;
+  padding: 15px 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(230, 57, 70, 0.6);
+}
+
+.hire-me-button:hover {
+  background-color: #b32b34;
+  box-shadow: 0 6px 15px rgba(179, 43, 52, 0.8);
+}
+
+
+
+/* About */
+
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.about-images {
+  display: flex;
+  flex-direction: column; /* empile les images verticalement */
+  gap: 15px;              /* espace entre les images */
+}
+
+.about-wrapper img {
+  margin-top: 15px;
+  max-width: 280px;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #0085ff;
+  object-fit: cover;
+}
+
+
+
+.about-text {
+  list-style: none;
+  padding-left: 0;
+  color: #ddd;
+  font-size: 1.1em;
+  flex: 1;
+  font-family: 'Fira Code', monospace;
+  text-align: justify; /* ← Ajout de cette ligne */
+
+}
+
+
+/* Réseaux */
+
+.social-cv {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  gap: 15px;
+  width: 100%; /* prend toute la largeur */
+}
+
+.social-cv2 {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  gap: 15px;
+  width: 100%; /* prend toute la largeur */
+}
+
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  filter: invert(1); /* si fond sombre, sinon enlève cette ligne */
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.social-cv img.linkedin {
+  width: 28px;
+  height: 28px;
+  filter: none;       /* Pas de filtre */
+  background: none;   /* Pas de fond */
+
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+.cv-button {
+  display: inline-block;
+  background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
+  color: #00fff7;
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 35px;
+  border: 2px solid #00fff7;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 12px rgba(0, 255, 247, 0.3);
+  margin-top: 20px;
+}
+
+.cv-button:hover {
+  background: #00fff7;
+  color: #0a0a0a;
+  box-shadow: 0 0 20px rgba(0, 255, 247, 0.8);
+  border-color: #00fff7;
+}
+
+
+
+.hire-me-container {
+  text-align: center;
+  margin-top: 50px; /* espace au-dessus */
+}
+
+.hire-me-button {
+  display: inline-block;
+  background: linear-gradient(45deg, #e63946, #ff4b5c);
+  color: white;
+  font-size: 2em;
+  font-weight: 800;
+  padding: 18px 60px;
+  border-radius: 40px;
+  border: 3px solid #e63946;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(230, 57, 70, 0.7);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Animation "pulse" au hover + ombre plus intense */
+.hire-me-button:hover {
+  background: linear-gradient(45deg, #ff4b5c, #e63946);
+  box-shadow: 0 0 20px 6px rgba(255, 75, 92, 0.7);
+  border-color: #ff4b5c;
+  animation: pulse 1.5s infinite;
+}
+
+/* Animation clé pulse */
+@keyframes pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px 6px rgba(255, 75, 92, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 30px 10px rgba(255, 75, 92, 1);
+  }
+}
+
+
+
+/* Education */
+
+.education-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Pour le logo (à gauche) */
+.education-image-left img {
+  max-width: 200px;
+  width: 100%;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  margin-right: 40px; /* Ajout d'espace à droite */
+
+}
+
+/* Pour l'image d'ambiance (à droite) */
+.education-image-right img {
+  max-width: 200px;
+  width: 100%;
+  object-fit: cover;
+  filter: invert(1) brightness(1.2) contrast(1.1);
+}
+
+/* Texte */
+.education-text {
+  list-style: none;
+  padding-left: 0;
+  color: #ddd;
+  font-size: 1.1em;
+  flex: 1;
+  font-family: 'Fira Code', monospace;
+  text-align: justify;
+
+}
+
+.education-text li + li {
+  margin-top: 15px; /* espace entre chaque école */
+}
+
+/* Experience & Projets*/
+
+#experience-projects {
+  padding: 60px 20px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+#experience-projects h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  font-family: 'Orbitron', sans-serif;
+  color: #00ffc3;
+}
+
+.project-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.project-block {
+  display: flex;
+  flex-direction: row;
+  background-color: #111;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 255, 195, 0.1);
+  align-items: stretch; /* pour que image et texte aient même hauteur */
+}
+
+/* Pour la petite image */
+.project-img-small {
+  width: 300px; /* taille plus petite */
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-right: 15px;
+  align-self: center; /* centre verticalement */
+  margin-left: 25px;
+
+
+}
+
+/* Pour la petite image */
+.project-img-small2 {
+  width: 300px; /* taille plus petite */
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-right: 15px;
+  margin-left: 25px;
+  align-self: center; /* centre verticalement */
+
+
+}
+
+/* Pour la grande image */
+.project-img-large {
+  width: 160px; /* taille plus grande */
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-right: 75px;
+  margin-left: 105px;
+  align-self: center; /* centre verticalement */
+
+
+
+}
+
+.project-text {
+  padding: 1.5rem;
+  color: #eee;
+}
+
+.project-text h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #00ffc3;
+}
+
+.project-text ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.project-text ul li {
+  padding-left: 1rem;
+  position: relative;
+  margin-bottom: 0.8rem;
+}
+
+.project-text ul li::before {
+  content: "•";
+  color: #6a00ff;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+
+
+.project-buttons {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center; /* Centrage horizontal */
+}
+
+.btn {
+  padding: 10px 18px;
+  background: linear-gradient(90deg, #00ffc3, #6a00ff);
+  color: #000;
+  font-weight: 700;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #6a00ff, #00ffc3);
+  color: #fff;
+}
+
+
+/* Modal overlay */
+.modal {
+  display: none; /* caché par défaut */
+  position: fixed; 
+  z-index: 999; 
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #111;
+  padding: 2rem 2.5rem;
+  border-radius: 15px;
+  width: 300px;
+  color: #eee;
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  box-shadow: 0 0 30px #00ffc3;
+  position: relative;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #6a00ff;
+  transition: color 0.3s;
+}
+.close-btn:hover {
+  color: #00ffc3;
+}
+
+/* Liste téléchargements */
+.download-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+.download-list li {
+  margin: 1rem 0;
+}
+.download-list a {
+  color: #00ffc3;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border: 2px solid #00ffc3;
+  border-radius: 25px;
+  display: inline-block;
+  transition: background 0.3s, color 0.3s;
+}
+.download-list a:hover {
+  background: #00ffc3;
+  color: #000;
+}
+
+
+/* Skills & Passions */
+
+.skills-wrapper {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.skills-list {
+  flex: 1 1 280px;
+  background: #111;
+  padding: 25px 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #00575fcc;
+  color: #00ffc3;
+  font-size: 1.1em;
+  line-height: 1.5;
+}
+
+.skills-list h3 {
+  margin-bottom: 15px;
+  color: #6a00ff;
+  border-bottom: 2px solid #00ffc3;
+  padding-bottom: 6px;
+}
+
+.skills-list ul {
+  list-style: inside circle;
+  padding-left: 0;
+}
+
+.skills-list.passions ul {
+  list-style-type: square;
+}
+
+/* Contact */
+
+#contact form {
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+#contact input,
+#contact textarea {
+  margin-top: 20px;
+  padding: 12px 15px;
+  font-size: 1em;
+  border-radius: 10px;
+  border: none;
+  background-color: #111;
+  color: #eee;
+  box-shadow: inset 0 0 10px #003a3ac0;
+  resize: vertical;
+}
+
+#contact input::placeholder,
+#contact textarea::placeholder {
+  color: #555;
+}
+
+#contact button {
+  padding: 14px 0;
+  font-size: 1.15em;
+  border-radius: 25px;
+  border: none;
+  background: linear-gradient(90deg, #00ffc3, #6a00ff);
+  color: #000;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.4s ease;
+}
+
+#contact button:hover {
+  background: linear-gradient(90deg, #0085ff, #4b00b2);
+}
+
+#contact select {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1.5px solid #555; /* bord sombre pour rester cohérent */
+  background-color: #111;   /* fond noir comme le reste du formulaire */
+  color: #eee;              /* texte clair */
+  font-size: 1rem;
+  appearance: none;         /* supprime le style natif sur certains navigateurs */
+  cursor: pointer;
+}
+
+/* Optionnel : flèche personnalisée pour le select */
+#contact select::-ms-expand {
+  display: none; /* IE */
+}
+
+#contact select option {
+  border: 1.5px solid #555; /* bord sombre pour rester cohérent */
+  background-color: #111;   /* fond noir comme le reste du formulaire */
+  color: #eee;
+}
+
+
+
+/* Footer */
+
+footer {
+  text-align: center;
+  padding: 20px 10px;
+  color: #333;
+  font-weight: 500;
+  font-size: 0.9em;
+  background-color: #000;
+  border-top: 1px solid #004d66;
+}
+
+/* Animation */
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
