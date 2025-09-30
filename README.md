@@ -18,7 +18,7 @@ Je suis étudiant en 5e année d'école d'ingénieur à Polytech Clermont dans l
 
 
 ## 🌐 Liens
-- Portfolio : [https://portfolio-ayman-zejli.netlify.app](#)  
+- Portfolio : [https://portfolio-ayman-zejli.netlify.app](https://portfolio-ayman-zejli.netlify.app)  
 - GitHub : [https://github.com/Aymanzej](https://github.com/Aymanzej)  
 
 ---
