@@ -41,6 +41,27 @@ header h1 {
   min-height: 30px;
 }
 
+/* Cadre pour photo de profil */
+.profile-photo-frame {
+  width: 250px;           /* largeur du cadre */
+  height: 250px;          /* hauteur du cadre */
+  border-radius: 50%;     /* cercle parfait */
+  overflow: hidden;       /* découpe l'image */
+  margin: 30px auto 0;    /* centre horizontalement avec marge en haut */
+  border: 5px solid #00ffc3; /* couleur du contour du cercle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 20px rgba(0, 255, 195, 0.4); /* léger halo */
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* remplit le cercle sans déformer */
+}
+
+
 /* Navigation */
 
 nav {
