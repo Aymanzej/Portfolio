@@ -4,7 +4,7 @@ const typedIntro = document.getElementById("typed-intro");
 
 const messages = [
   "Bienvenue sur mon portfolio.",
-  "Je m'appelle Ayman ZEJLI, j'ai 21 ans.",
+  "Je m'appelle Ayman ZEJLI, j'ai 22 ans.",
   "Étudiant à Polytech Clermont-Ferrand en Ingénierie Mathématiques et Data Science.",
   "Passionné par l’Intelligence Artificielle et l’analyse de données, en particulier dans le domaine sportif - football.",
   "N’hésitez pas à parcourir mon parcours, mes projets et à me contacter."
